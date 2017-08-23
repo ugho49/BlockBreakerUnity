@@ -4,13 +4,13 @@ using UnityEngine;
 
 public class BallController : MonoBehaviour {
 
-	public GameObject paddle;
-
+	GameObject paddle;
 	Vector3 paddleToBallVector;
 	bool hasStarted;
 
 	// Use this for initialization
 	void Start () {
+		paddle = GameObject.FindGameObjectWithTag ("Paddle");
 		paddleToBallVector = this.transform.position - paddle.transform.position;
 		hasStarted = false;
 	}
