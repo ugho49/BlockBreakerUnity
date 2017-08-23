@@ -7,11 +7,11 @@ public class LoseCollider : MonoBehaviour {
 	LevelManager levelManager;
 
 	void Start() {
-		levelManager = new LevelManager ();
+		levelManager = GameObject.FindObjectOfType<LevelManager> ();
 	}
 
 	void OnTriggerEnter2D(Collider2D collider) {
-		Debug.Log ("You lose");
+		BrickController.breakableCount = 0;
 		levelManager.LoadLevel ("Lose");
 	}
 

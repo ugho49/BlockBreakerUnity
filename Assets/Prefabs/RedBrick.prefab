@@ -23,8 +23,8 @@ GameObject:
   - component: {fileID: 61699760935108714}
   - component: {fileID: 114942373479775490}
   m_Layer: 0
-  m_Name: 3HitBrick
-  m_TagString: Untagged
+  m_Name: RedBrick
+  m_TagString: Breakable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -78,10 +78,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 12c1bc3fb40e52946bf613dbeced0b0a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHits: 3
   hitSprites:
   - {fileID: 21300020, guid: 031af70365c50ba42a91ced4b3df868b, type: 3}
   - {fileID: 21300006, guid: 031af70365c50ba42a91ced4b3df868b, type: 3}
+  crack: {fileID: 0}
 --- !u!212 &212462400588117570
 SpriteRenderer:
   m_ObjectHideFlags: 1

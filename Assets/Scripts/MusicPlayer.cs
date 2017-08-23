@@ -9,7 +9,7 @@ public class MusicPlayer : MonoBehaviour {
 	void Awake () {
 		if (instance != null) {
 			Destroy (gameObject);
-			print ("Duplicate music player, self-destructing");
+			// Duplicate music player, self-destructing"
 			return;
 		} 
 

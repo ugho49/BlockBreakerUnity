@@ -21,10 +21,18 @@ public class BallController : MonoBehaviour {
 			this.transform.position = paddle.transform.position + paddleToBallVector;
 
 			if (Input.GetKeyDown (KeyCode.Mouse0)) {
-				print ("launch ball");
 				hasStarted = true;
-				this.GetComponent<Rigidbody2D> ().velocity = new Vector2 (2f, 10f);
+				GetComponent<Rigidbody2D> ().velocity = new Vector2 (2f, 10f);
 			}
+		}
+	}
+
+	void OnCollisionEnter2D(Collision2D collision) {
+		if (hasStarted) {
+			//GetComponent<AudioSource> ().Play ();
+
+			Vector2 tweak = new Vector2 (Random.Range(0f, 0.2f), Random.Range(0f, 0.2f));
+			GetComponent<Rigidbody2D> ().velocity += tweak;
 		}
 	}
 }
